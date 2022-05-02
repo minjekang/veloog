@@ -8,6 +8,7 @@ header {
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: #f8f9fa;
 }
 .head {
   font-family: "Fira Sans", sans-serif;
@@ -17,11 +18,15 @@ header {
   align-items: center;
   height: 64px;
 }
-.logo {
-  font-size: 24px;
-  font-weight: 590;
-}
 
+.logo {
+  margin-top: 4px;
+  position: relative;
+}
+.logo-bold {
+  position: absolute;
+  right: 0;
+}
 .sun {
   width: 26px;
   height: 26px;
@@ -36,6 +41,7 @@ header {
   background-color: #212529;
   color: #ffffff;
   font-size: 16px;
+  font-weight: 600;
   border-radius: 20px;
 }
 
@@ -49,4 +55,5 @@ header {
 
 .a {
   height: 2000px;
+  background-color: #f8f9fa;
 }

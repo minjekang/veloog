@@ -1,11 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../style/component.scss";
 function Header() {
   return (
     <>
       <header>
         <div className="head">
-          <p className="logo">veloog</p>
+          <div className="logo">
+            <img src="images/logo.png" />
+            <img src="images/logo.png" className="logo-bold" />
+          </div>
           <div className="headiv">
             <img src="images/sun.png" className="sun" />
             <img src="images/search.png" className="search" />
