@@ -12,11 +12,27 @@ function Header() {
           </div>
           <div className="headiv">
             <img src="images/sun.png" className="sun" />
-            <img src="images/search.png" className="search" />
+            <Link to="search">
+              <img src="images/search.png" className="search" />
+            </Link>
             <button className="login">로그인</button>
           </div>
         </div>
       </header>
+      <div className="navi">
+        <nav>
+          <div className="trendingRecent">
+            <Link to="/" className="trending">
+              <img src="images/up.png" className="up" />
+              트렌딩
+            </Link>
+            <Link to="recent" className="recent">
+              <img src="images/clock.png" className="clock" />
+              최신
+            </Link>
+          </div>
+        </nav>
+      </div>
     </>
   );
 }

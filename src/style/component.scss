@@ -2,8 +2,13 @@
   margin: 0;
   padding: 0;
 }
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&family=Sunflower:wght@300&display=swap");
-
+@font-face {
+  font-family: "HallymGothic-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 header {
   width: 100%;
   display: flex;
@@ -11,7 +16,6 @@ header {
   background-color: #f8f9fa;
 }
 .head {
-  font-family: "Fira Sans", sans-serif;
   display: flex;
   justify-content: space-between;
   width: 91%;
@@ -27,13 +31,23 @@ header {
   position: absolute;
   right: 0;
 }
+.headiv {
+  margin-right: -6px;
+  width: 178px;
+  height: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .sun {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
 }
 .search {
-  width: 34px;
-  height: 34px;
+  margin-bottom: -4px;
+  margin-right: -2px;
+  width: 32px;
+  height: 32px;
 }
 .login {
   width: 80px;
@@ -45,15 +59,46 @@ header {
   border-radius: 20px;
 }
 
-.headiv {
-  width: 172px;
-  height: 40px;
+.navi {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+nav {
+  font-family: "HallymGothic-Regular";
+  margin-top: 1.5rem;
+  width: 91%;
+  height: 48px;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+}
+.trendingRecent {
+  width: 14rem;
   display: flex;
   justify-content: space-around;
-  align-items: center;
+}
+.trending {
+  text-decoration: none;
+  color: #000000;
+}
+.recent {
+  text-decoration: none;
+  color: #000000;
+}
+.up {
+  width: 24px;
+  margin-bottom: -5px;
+  margin-right: 0.5rem;
+}
+.clock {
+  width: 23px;
+  margin-bottom: -5px;
+  margin-right: 0.5rem;
 }
 
 .a {
-  height: 2000px;
+  height: 3000px;
   background-color: #f8f9fa;
 }
