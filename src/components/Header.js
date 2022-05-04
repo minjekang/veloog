@@ -21,16 +21,24 @@ function Header() {
       </header>
       <div className="navi">
         <nav>
-          <div className="trendingRecent">
-            <Link to="/" className="trending">
-              <img src="images/up.png" className="up" />
-              트렌딩
-            </Link>
-            <Link to="recent" className="recent">
-              <img src="images/clock.png" className="clock" />
-              최신
-            </Link>
+          <div className="header-left">
+            <div className="trendingRecent">
+              <Link to="/" className="trending">
+                <img src="images/up.png" className="up" />
+                트렌딩
+              </Link>
+              <Link to="recent" className="recent">
+                <img src="images/clock.png" className="clock" />
+                최신
+              </Link>
+            </div>
+            <select>
+              <option value="이번주" className="op">
+                이번주
+              </option>
+            </select>
           </div>
+          <img src="images/menu.png" className="menu" />
         </nav>
       </div>
     </>
