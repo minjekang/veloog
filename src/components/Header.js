@@ -33,9 +33,10 @@ function Header() {
               </Link>
             </div>
             <select>
-              <option value="이번주" className="op">
-                이번주
-              </option>
+              <option className="op">오늘 </option>
+              <option className="op">이번 주 </option>
+              <option className="op">이번 달 </option>
+              <option className="op">올해 </option>
             </select>
           </div>
           <img src="images/menu.png" className="menu" />
