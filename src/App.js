@@ -13,15 +13,15 @@ function App() {
       <BrowserRouter>
         <Headroom
           style={{
-            webkitTransition: "all 0.87s ease-in-out",
-            mozTransition: "all 0.87s ease-in-out",
-            oTransition: "all 0.87s ease-in-out",
-            transition: "all 0.87s ease-in-out",
+            webkitTransition: "all 0.8s ease-in-out",
+            mozTransition: "all 0.8s ease-in-out",
+            oTransition: "all 0.8s ease-in-out",
+            transition: "all 0.8s ease-in-out",
           }}
         >
           <Header />
         </Headroom>
-
+        <Main />
         <div className="a"></div>
 
         <Routes>

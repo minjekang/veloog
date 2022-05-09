@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
 }
+/*------------------------Header---------------------------*/
 @font-face {
   font-family: "HallymGothic-Regular";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2204@1.0/HallymGothic-Regular.woff2")
@@ -57,7 +58,7 @@ header {
   font-weight: 600;
   border-radius: 20px;
 }
-.navi {
+#navi {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -66,7 +67,7 @@ header {
 nav {
   font-family: "HallymGothic-Regular";
   margin-top: 1.5rem;
-  width: 91%;
+  width: 90.8%;
   height: 48px;
   font-size: 1.125rem;
   display: flex;
@@ -77,8 +78,7 @@ nav {
 .header-left {
   display: flex;
   align-items: center;
-  width: 18rem;
-  background-color: #a3a3a3;
+  width: 20rem;
 }
 .trendingRecent {
   width: 14rem;
@@ -88,10 +88,26 @@ nav {
 .trending {
   text-decoration: none;
   color: #000000;
+  opacity: 0.5;
+  &::after {
+    opacity: 1;
+  }
 }
 .recent {
   text-decoration: none;
   color: #000000;
+  opacity: 0.5;
+  &::after {
+    opacity: 1;
+  }
+}
+.navTag {
+  height: 2rem;
+  width: 6rem;
+  padding: 0 0.5rem;
+  border: none;
+  box-shadow: rgb(0 0 0 / 5%) 0px 0px 4px;
+  border-radius: 4px;
 }
 .up {
   width: 24px;
@@ -110,4 +126,33 @@ nav {
 .a {
   height: 3000px;
   background-color: #f8f9fa;
+}
+
+/*------------------------contents---------------------------*/
+
+#c-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  background-color: #f8f9fa;
+}
+
+.c-post {
+  width: 20rem;
+  height: 25rem;
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 4%) 0px 4px 16px 0px;
+  transition: box-shadow 0.25s ease-in 0s, transform 0.25s ease-in 0s;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  transition: 0.5s;
+  &:hover {
+    margin-top: 0.5rem;
+    box-shadow: rgb(0 0 0 / 12%) 0px 4px 10px 0px;
+  }
 }

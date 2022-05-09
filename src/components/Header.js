@@ -19,7 +19,7 @@ function Header() {
           </div>
         </div>
       </header>
-      <div className="navi">
+      <div id="navi">
         <nav>
           <div className="header-left">
             <div className="trendingRecent">
@@ -32,7 +32,7 @@ function Header() {
                 최신
               </Link>
             </div>
-            <select>
+            <select className="navTag">
               <option className="op">오늘 </option>
               <option className="op">이번 주 </option>
               <option className="op">이번 달 </option>
