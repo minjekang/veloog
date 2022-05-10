@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../style/component.scss";
+import "Contents.scss";
 const Contents = () => {
   return (
     <div id="c-wrap">

@@ -1,10 +1,9 @@
 import "./App.css";
-import { Link, BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Search from "./pages/Search.js";
 import Main from "./pages/Main.js";
-import Header from "./components/Header";
+import Header from "./components/header/Header";
 import Headroom from "react-headroom";
-import "./style/component.scss";
 import Recent from "./pages/Recent";
 import Posting from "./pages/Posting";
 

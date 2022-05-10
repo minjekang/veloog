@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../style/component.scss";
+import "Header.scss";
 import Modal from "react-modal";
 
 const Header = () => {
@@ -11,18 +11,7 @@ const Header = () => {
         <Modal
           isOpen={modalIsOpen}
           onRequestClose={() => setIsOpen(false)}
-          contentLabel="Example Modal"
-        >
-          <button onClick={() => setIsOpen(false)}>close</button>
-          <div>I am a modal</div>
-          <form>
-            <input />
-            <button>tab navigation</button>
-            <button>stays</button>
-            <button>inside</button>
-            <button>the modal</button>
-          </form>
-        </Modal>
+        ></Modal>
       </div>
       <header>
         <div className="head">
