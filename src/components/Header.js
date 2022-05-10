@@ -1,9 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../style/component.scss";
-function Header() {
+import Modal from "react-modal";
+
+const Header = () => {
+  const [modalIsOpen, setIsOpen] = useState(false);
   return (
     <>
+      <div>
+        <Modal
+          isOpen={modalIsOpen}
+          onRequestClose={() => setIsOpen(false)}
+          contentLabel="Example Modal"
+        >
+          <button onClick={() => setIsOpen(false)}>close</button>
+          <div>I am a modal</div>
+          <form>
+            <input />
+            <button>tab navigation</button>
+            <button>stays</button>
+            <button>inside</button>
+            <button>the modal</button>
+          </form>
+        </Modal>
+      </div>
       <header>
         <div className="head">
           <div className="logo">
@@ -15,7 +35,9 @@ function Header() {
             <Link to="search">
               <img src="images/search.png" className="search" />
             </Link>
-            <button className="login">로그인</button>
+            <button className="login" onClick={() => setIsOpen(true)}>
+              로그인
+            </button>
           </div>
         </div>
       </header>
@@ -44,5 +66,5 @@ function Header() {
       </div>
     </>
   );
-}
+};
 export default Header;

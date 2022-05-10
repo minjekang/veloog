@@ -1,6 +1,7 @@
 import React from "react";
+import Contents from "../components/Contents";
 const Recent = () => {
-  return;
+  return <Contents />;
 };
 
 export default Recent;

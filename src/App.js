@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Headroom from "react-headroom";
 import "./style/component.scss";
 import Recent from "./pages/Recent";
+import Posting from "./pages/Posting";
 
 function App() {
   return (
@@ -21,13 +22,12 @@ function App() {
         >
           <Header />
         </Headroom>
-        <Main />
-        <div className="a"></div>
 
         <Routes>
           <Route path="/" element={<Main />}></Route>
           <Route path="/search" element={<Search />}></Route>
           <Route path="/recent" element={<Recent />}></Route>
+          <Route path="@:nickname/:title" element={<Posting />}></Route>
         </Routes>
       </BrowserRouter>
     </>
