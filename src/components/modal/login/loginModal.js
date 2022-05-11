@@ -1,18 +1,20 @@
-import React from "react";
-
-const login = () => {
+import React, { useState } from "react";
+import "./loginModal.scss";
+const LoginModal = () => {
   return (
-    <>
-      <button onClick={() => setIsOpen(false)}>close</button>
-      <form>
-        <input />
-        <button>tab navigation</button>
-        <button>stays</button>
-        <button>inside</button>
-        <button>the modal</button>
-      </form>
-    </>
+    <div className="loginModal-wrap">
+      <div className="loginModal">
+        <button>close</button>
+        <form>
+          <input />
+          <button>tab navigation</button>
+          <button>stays</button>
+          <button>inside</button>
+          <button>the modal</button>
+        </form>
+      </div>
+    </div>
   );
 };
 
-export default login;
+export default LoginModal;

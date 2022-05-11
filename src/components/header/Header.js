@@ -1,18 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "Header.scss";
-import Modal from "react-modal";
-
+import LoginModal from "../modal/login/loginModal";
+import "./Header.scss";
 const Header = () => {
-  const [modalIsOpen, setIsOpen] = useState(false);
+  const [openLogin, setOpenLogin] = useState();
   return (
     <>
-      <div>
-        <Modal
-          isOpen={modalIsOpen}
-          onRequestClose={() => setIsOpen(false)}
-        ></Modal>
-      </div>
       <header>
         <div className="head">
           <div className="logo">
@@ -24,12 +17,11 @@ const Header = () => {
             <Link to="search">
               <img src="images/search.png" className="search" />
             </Link>
-            <button className="login" onClick={() => setIsOpen(true)}>
-              로그인
-            </button>
+            <button className="login">로그인</button>
           </div>
         </div>
       </header>
+
       <div id="navi">
         <nav>
           <div className="header-left">

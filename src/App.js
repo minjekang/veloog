@@ -6,10 +6,12 @@ import Header from "./components/header/Header";
 import Headroom from "react-headroom";
 import Recent from "./pages/Recent";
 import Posting from "./pages/Posting";
+import LoginModal from "./components/modal/login/loginModal";
 
 function App() {
   return (
     <>
+      <LoginModal />
       <BrowserRouter>
         <Headroom
           style={{
