@@ -1,7 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Contents.scss";
+import axios from "axios";
+
 const Contents = () => {
+  let page = 0;
+  const [item, setItem] = useState([0]);
+  const getData = () => {
+    axios
+      .get("http://10.120.74.86/api/v1/recent?page=0", {
+        params: {
+          page: page,
+        },
+      })
+      .then(function (response) {
+        setItem(response);
+        item.map();
+        console.log(item);
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+      .finally(function () {
+        // always executed
+      });
+  };
+
   return (
     <div id="c-wrap">
       <Link to="@:nickname/:title" className="c-post">

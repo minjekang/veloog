@@ -7,8 +7,7 @@ const Main = () => {
       {/* <Contents />
       <Modal isOpen={state} />
   stae ? <>dasf</> : <></> */}
-
-      <div className="a"></div>
+      <Contents />
     </>
   );
 };
