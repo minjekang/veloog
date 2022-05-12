@@ -11,6 +11,7 @@ import LoginModal from "./components/modal/login/loginModal";
 function App() {
   return (
     <>
+      <LoginModal />
       <BrowserRouter>
         <Headroom
           style={{

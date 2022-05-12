@@ -14,6 +14,83 @@
   box-shadow: rgb(0 0 0 / 9%) 0px 2px 12px 0px;
 }
 
+.login-leftBox {
+  width: 216px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  & h4 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: #5d6368;
+    text-align: center;
+    margin-top: 1.5rem;
+  }
+}
+.login-rightBox {
+  flex: 1 1 0%;
+  background: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  & .close-wrap {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2.25rem;
+  }
+  & .close {
+    width: 14px;
+    height: 14px;
+    opacity: 0.7;
+  }
+}
+.welcom-wrap {
+  display: flex;
+  text-align: center;
+}
+.welcome-ch {
+  width: 166px;
+  height: 116px;
+}
+.login-wrap {
+  & .login-tit {
+    font-size: 1.3125rem;
+    color: #161718;
+  }
+}
+.emailLogin {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #7f878f;
+}
+.email-input {
+  display: flex;
+  & input {
+    font-size: 1rem;
+    padding: 1rem;
+    outline: none;
+    border: 1px solid #c9ced3;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    flex: 1 1 0%;
+  }
+  & input:focus {
+    border: 1px solid #20c393;
+  }
+  & button {
+    width: 6rem;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    color: white;
+    background-color: #20c393;
+    cursor: pointer;
+  }
+}
 .a {
   height: 2000px;
 }
