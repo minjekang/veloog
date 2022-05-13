@@ -17,7 +17,7 @@ const LoginModal = () => {
           <div className="login-wrap">
             <h4 className="login-tit">로그인</h4>
             <section>
-              <h4 className="emailLogin">이메일로 로그인</h4>
+              <h3 className="emailLogin">이메일로 로그인</h3>
               <form className="email-input">
                 <input placeholder="이메일을 입력하세요."></input>
                 <button>로그인</button>
