@@ -23,6 +23,20 @@ const LoginModal = () => {
                 <button>로그인</button>
               </form>
             </section>
+            <section className="socialLogin">
+              <h3>소셜 계정으로 로그인</h3>
+              <section>
+                <div className="github">
+                  <img src="images/github.png"></img>
+                </div>
+                <div className="google">
+                  <img src="images/google.png"></img>
+                </div>
+                <div className="facebook">
+                  <img src="images/facebook.png"></img>
+                </div>
+              </section>
+            </section>
           </div>
         </div>
       </div>
