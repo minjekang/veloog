@@ -89,8 +89,12 @@
     flex: 1 1 0%;
     font-family: "Athiti", sans-serif;
     font-weight: 600;
-    padding-top: 16px;
+    padding-top: 18px;
     padding-left: 16px;
+    &::placeholder {
+      color: #8e9091;
+      font-weight: lighter;
+    }
   }
   & input:focus {
     border: 1px solid #20c393;
