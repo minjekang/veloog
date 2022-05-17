@@ -47,8 +47,7 @@ const Contents = () => {
           <span className="user">
             <div className="user-img"></div>
             <span>
-              <b className="by">by </b>
-              <b>miinjje</b>
+              <b className="by">by </b>/<b>miinjje</b>
             </span>
           </span>
           <div className="like">

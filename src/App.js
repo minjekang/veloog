@@ -7,11 +7,14 @@ import Headroom from "react-headroom";
 import Recent from "./pages/Recent";
 import Posting from "./pages/Posting";
 import LoginModal from "./components/modal/login/loginModal";
+import { loginStore } from "./store";
 
 function App() {
+  const isOpen = loginStore((state) => state.isOpen);
+
   return (
     <>
-      <LoginModal />
+      {isOpen && <LoginModal />}
       <BrowserRouter>
         <Headroom
           style={{

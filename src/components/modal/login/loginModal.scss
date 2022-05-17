@@ -1,10 +1,59 @@
 @import url("https://fonts.googleapis.com/css2?family=Athiti:wght@300&family=Fira+Sans:wght@500&family=Sunflower&display=swap");
+$isopen: true;
+@keyframes openModal {
+  0% {
+    transform: scale(0.5);
+    margin-top: 1000px;
+    opacity: 0;
+  }
+  70% {
+    margin-bottom: 80px;
+  }
+  80% {
+    margin-bottom: 40px;
+  }
+  90% {
+    margin-bottom: 20px;
+  }
+  100% {
+    margin-bottom: 0px;
+    transform: scale(1);
+    width: 606px;
+    height: 480px;
+    opacity: 1;
+  }
+}
+@keyframes closeModal {
+  from {
+    transform: scale(1);
+    width: 606px;
+    height: 480px;
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.7);
+    margin-top: 800px;
+    opacity: 0;
+  }
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 5;
+  opacity: 0.7;
+}
+
 .loginModal-wrap {
   position: fixed;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
+  z-index: 5;
   align-items: center;
 }
 
@@ -13,6 +62,8 @@
   height: 480px;
   display: flex;
   box-shadow: rgb(0 0 0 / 9%) 0px 2px 12px 0px;
+  animation-name: openModal;
+  animation-duration: 0.4s;
 }
 
 .login-leftBox {
@@ -48,6 +99,7 @@
     opacity: 0.7;
     margin-top: 5.2px;
     margin-right: 5.4px;
+    cursor: pointer;
   }
 }
 .welcom-wrap {
@@ -55,11 +107,16 @@
   text-align: center;
 }
 .welcome-ch {
-  width: 166px;
-  height: 116px;
+  width: 168px;
+  height: 118px;
   margin-top: -12px;
 }
 .login-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 4px;
+  height: 100%;
   & .login-tit {
     font-size: 1.3125rem;
     color: #161718;
@@ -130,6 +187,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
     }
     & div img {
       height: 20px;
@@ -152,6 +210,23 @@
         height: 28px;
         width: 28px;
       }
+    }
+  }
+}
+footer {
+  margin-bottom: 2px;
+  text-align: right;
+  & b {
+    color: #1b1a1a;
+    font-weight: lighter;
+    font-weight: 400;
+  }
+  & span {
+    color: #1db688;
+    font-weight: bolder;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }
