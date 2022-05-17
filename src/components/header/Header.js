@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { loginStore } from "../../store";
 import LoginModal from "../modal/login/loginModal";
 import "./Header.scss";
 const Header = () => {
-  const [openLogin, setOpenLogin] = useState();
+  const setIsOpen = loginStore((state) => state.setIsOpen);
   return (
     <>
       <header>
@@ -17,7 +18,9 @@ const Header = () => {
             <Link to="search">
               <img src="images/search.png" className="search" />
             </Link>
-            <button className="login">로그인</button>
+            <button className="login" onClick={() => setIsOpen()}>
+              로그인
+            </button>
           </div>
         </div>
       </header>
