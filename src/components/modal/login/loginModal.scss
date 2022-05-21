@@ -25,14 +25,13 @@ $isopen: true;
 }
 @keyframes closeModal {
   from {
+    margin-bottom: 800px;
     transform: scale(1);
-    width: 606px;
-    height: 480px;
     opacity: 1;
   }
   to {
+    margin-bottom: 0;
     transform: scale(0.7);
-    margin-top: 800px;
     opacity: 0;
   }
 }
@@ -46,7 +45,9 @@ $isopen: true;
   z-index: 5;
   opacity: 0.7;
 }
-
+// ::-webkit-scrollbar {
+//   display: none;
+// }
 .loginModal-wrap {
   position: fixed;
   width: 100%;
@@ -55,9 +56,18 @@ $isopen: true;
   justify-content: center;
   z-index: 5;
   align-items: center;
+  & .closeLoginModal {
+    margin-top: 800px;
+    width: 606px;
+    height: 480px;
+    display: flex;
+    box-shadow: rgba(255, 0, 0, 0.09) 0px 2px 12px 0px;
+    animation-name: closeModal;
+    animation-duration: 0.4s;
+  }
 }
 
-.loginModal {
+.openLoginModal {
   width: 606px;
   height: 480px;
   display: flex;
