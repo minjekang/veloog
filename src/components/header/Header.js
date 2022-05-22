@@ -5,6 +5,7 @@ import LoginModal from "../modal/login/loginModal";
 import "./Header.scss";
 const Header = () => {
   const setIsOpen = loginStore((state) => state.setIsOpen);
+
   return (
     <>
       <header>

@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Search from "./pages/Search.js";
 import Main from "./pages/Main.js";
@@ -11,6 +12,9 @@ import { loginStore } from "./store";
 
 function App() {
   const isOpen = loginStore((state) => state.isOpen);
+  useEffect(() => {
+    console.log(isOpen);
+  }, [isOpen]);
 
   return (
     <>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { loginStore } from "../../../store";
 import "./loginModal.scss";
 const LoginModal = () => {
