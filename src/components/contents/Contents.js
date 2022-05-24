@@ -5,24 +5,21 @@ import axios from "axios";
 
 const Contents = () => {
   let page = 0;
-  const [item, setItem] = useState([0]);
   const getData = () => {
     axios
-      .get("http://10.120.74.86/api/v1/recent?page=0", {
+      .get("http://10.120.74.86:8000/api/v1/trending", {
         params: {
           page: page,
         },
+        dataType: "json",
+        headers: { "Content-type": "application/json" },
       })
       .then(function (response) {
-        setItem(response);
-        item.map();
-        console.log(item);
+        let arr = response.data;
+        arr.map();
       })
       .catch(function (error) {
         console.log(error);
-      })
-      .finally(function () {
-        // always executed
       });
   };
 
@@ -57,7 +54,7 @@ const Contents = () => {
         </div>
       </Link>
 
-      <div className="c-post"></div>
+      <div onClick={() => getData()} className="c-post"></div>
       <div className="c-post"></div>
       <div className="c-post"></div>
       <div className="c-post"></div>

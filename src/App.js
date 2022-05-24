@@ -20,14 +20,7 @@ function App() {
     <>
       {isOpen && <LoginModal />}
       <BrowserRouter>
-        <Headroom
-          style={{
-            webkitTransition: "all 0.8s ease-in-out",
-            mozTransition: "all 0.8s ease-in-out",
-            oTransition: "all 0.8s ease-in-out",
-            transition: "all 0.8s ease-in-out",
-          }}
-        >
+        <Headroom>
           <Header />
         </Headroom>
 

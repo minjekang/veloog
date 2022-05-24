@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { loginStore } from "../../store";
-import LoginModal from "../modal/login/loginModal";
 import "./Header.scss";
 const Header = () => {
   const setIsOpen = loginStore((state) => state.setIsOpen);
@@ -10,10 +9,10 @@ const Header = () => {
     <>
       <header>
         <div className="head">
-          <div className="logo">
+          <Link to="/" className="logo">
             <img src="images/logo.png" />
             <img src="images/logo.png" className="logo-bold" />
-          </div>
+          </Link>
           <div className="headiv">
             <img src="images/sun.png" className="sun" />
             <Link to="search">
