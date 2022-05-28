@@ -25,7 +25,9 @@ const LoginModal = () => {
                   <img
                     src="images/close.png"
                     className="close"
-                    onClick={() => setTimeout(setIsOpen, 500)}
+                    onClick={() => {
+                      setIsOpen(), setTimeout(500);
+                    }}
                   />
                 </div>
                 <div className="login-wrap">
