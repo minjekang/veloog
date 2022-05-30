@@ -6,7 +6,14 @@ const LoginModal = () => {
   const isOpen = loginStore((state) => state.isOpen);
   const setSignUp = loginStore((state) => state.setSignUp);
   const signUp = loginStore((state) => state.signUp);
-
+  useEffect(() => {
+    document.body.style.cssText = `
+    overflow: hidden;
+    `;
+    return () => {
+      document.body.style.cssText = "";
+    };
+  }, [isOpen]);
   return (
     <>
       {signUp ? (
@@ -26,7 +33,7 @@ const LoginModal = () => {
                     src="images/close.png"
                     className="close"
                     onClick={() => {
-                      setIsOpen(), setTimeout(500);
+                      setTimeout(setIsOpen(), 500);
                     }}
                   />
                 </div>
