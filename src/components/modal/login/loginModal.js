@@ -8,7 +8,7 @@ const LoginModal = () => {
   const signUp = loginStore((state) => state.signUp);
   useEffect(() => {
     document.body.style.cssText = `
-    overflow: hidden;
+      overflow: hidden;
     `;
     return () => {
       document.body.style.cssText = "";
@@ -33,7 +33,7 @@ const LoginModal = () => {
                     src="images/close.png"
                     className="close"
                     onClick={() => {
-                      setTimeout(setIsOpen(), 500);
+                      setIsOpen();
                     }}
                   />
                 </div>
@@ -73,8 +73,14 @@ const LoginModal = () => {
         </>
       ) : (
         <>
-          <div className="background" />
-          <div className="loginModal-wrap">
+          <div
+            style={{ display: isOpen ? "block" : "none" }}
+            className="background"
+          />
+          <div
+            style={{ display: isOpen ? "flex" : "none 0.4s" }}
+            className="loginModal-wrap"
+          >
             <div className={isOpen ? "openLoginModal" : "closeLoginModal"}>
               <div className="login-leftBox">
                 <div className="welcome-wrap">
@@ -87,7 +93,9 @@ const LoginModal = () => {
                   <img
                     src="images/close.png"
                     className="close"
-                    onClick={() => setTimeout(() => setIsOpen(), 300)}
+                    onClick={() => {
+                      setIsOpen();
+                    }}
                   />
                 </div>
                 <div className="login-wrap">
