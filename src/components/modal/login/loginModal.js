@@ -19,8 +19,8 @@ const LoginModal = () => {
       {signUp ? (
         <>
           <div className="background" />
-          <div className="loginModal-wrap">
-            <div className={isOpen ? "openLoginModal" : "closeLoginModal"}>
+          <div className={isOpen ? "openLoginModal" : "closeLoginModal"}>
+            <div>
               <div className="login-leftBox">
                 <div className="welcome-wrap">
                   <img src="images/loginChar.png" className="welcome-ch" />
@@ -78,7 +78,7 @@ const LoginModal = () => {
             className="background"
           />
           <div
-            style={{ display: isOpen ? "flex" : "none 0.4s" }}
+            style={{ display: isOpen ? "flex" : "none" }}
             className="loginModal-wrap"
           >
             <div className={isOpen ? "openLoginModal" : "closeLoginModal"}>
