@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      {<LoginModal />}
+      {isOpen && <LoginModal />}
       <BrowserRouter>
         <Headroom>
           <Header />

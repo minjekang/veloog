@@ -1,11 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { loginStore } from "../../../store";
 import "./loginModal.scss";
+import styled from "styled-components";
 const LoginModal = () => {
   const setIsOpen = loginStore((state) => state.setIsOpen);
   const isOpen = loginStore((state) => state.isOpen);
   const setSignUp = loginStore((state) => state.setSignUp);
   const signUp = loginStore((state) => state.signUp);
+  const Background = styled.div`
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 5;
+    opacity: 0.7;
+  `;
   useEffect(() => {
     document.body.style.cssText = `
       overflow: hidden;
@@ -18,9 +29,9 @@ const LoginModal = () => {
     <>
       {signUp ? (
         <>
-          <div className="background" />
-          <div className={isOpen ? "openLoginModal" : "closeLoginModal"}>
-            <div>
+          <Background />
+          <div className="loginModal-wrap">
+            <div className={isOpen ? "openLoginModal" : "closeLoginModal"}>
               <div className="login-leftBox">
                 <div className="welcome-wrap">
                   <img src="images/loginChar.png" className="welcome-ch" />
@@ -73,10 +84,7 @@ const LoginModal = () => {
         </>
       ) : (
         <>
-          <div
-            style={{ display: isOpen ? "block" : "none" }}
-            className="background"
-          />
+          <Background />
           <div
             style={{ display: isOpen ? "flex" : "none" }}
             className="loginModal-wrap"
