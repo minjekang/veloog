@@ -17,14 +17,7 @@ const LoginModal = () => {
     z-index: 5;
     opacity: 0.7;
   `;
-  useEffect(() => {
-    document.body.style.cssText = `
-      overflow: hidden;
-    `;
-    return () => {
-      document.body.style.cssText = "";
-    };
-  }, [isOpen]);
+
   return (
     <>
       {signUp ? (
