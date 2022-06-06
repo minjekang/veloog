@@ -31,7 +31,7 @@ const LoginModal = () => {
         <>
           <Background />
           <div className="loginModal-wrap">
-            <div className={isOpen ? "openLoginModal" : "closeLoginModal"}>
+            <div className={isOpen ? "closeLoginModal" : "closeLoginModal"}>
               <div className="login-leftBox">
                 <div className="welcome-wrap">
                   <img src="images/loginChar.png" className="welcome-ch" />
